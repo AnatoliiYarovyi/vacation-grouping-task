@@ -12,9 +12,9 @@ const getAll = async () => {
     const allEmployee = await getAllEmployee(data);
     const filterVacation = await getfilterVacation(data, allEmployee);
     const stringData = await JSON.stringify(filterVacation);
-    console.log("filterVacation: ", filterVacation);
 
     await fs.writeFile("dbAfterFilter.json", stringData);
+    console.log(`Data save in "dbAfterFilter.json"`);
   } catch (error) {
     console.log(error);
   }
