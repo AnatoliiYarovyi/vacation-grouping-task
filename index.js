@@ -14,7 +14,7 @@ const getAll = async () => {
     const stringData = await JSON.stringify(filterVacation);
     console.log("filterVacation: ", filterVacation);
 
-    //   await fs.writeFile("dbAfterFilter.json", stringData);
+    await fs.writeFile("dbAfterFilter.json", stringData);
   } catch (error) {
     console.log(error);
   }
